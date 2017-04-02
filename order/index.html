@@ -1,0 +1,114 @@
+<!--Хедер табов-->
+<html lang="ru">
+<main>
+<div class="container-fluid">
+	<button type="button" class="close visible-xs" data-dismiss="modal" aria-hidden="true">×</button>
+	<div class="row">
+		<div class="col-xs-10 col-sm-9">
+<!--			Верхние вкладки (табы)-->
+		<div role="tabpanel">
+			<ul class="nav nav-tabs" role="tablist">
+<!--					Вкладки таб-панели дестоп версия	-->
+				<li role="presentation" class="active hidden-xs"><a href="#orderTabAuto" data-toggle="tab" role="tab" aria-controls="orderTabAuto">Запчасть для поиска</a></li>
+				<li role="presentation" class="hidden-xs"><a href="#orderTabPersonal" data-toggle="tab" role="tab" aria-controls="orderTabPersonal">Личные данные</a></li>
+				<li role="presentation" class="hidden-xs"><a href="#orderTabPay" data-toggle="tab" role="tab" aria-controls="orderTabPay">Оплата</a></li>
+
+<!--					Вкладки таб-панели мобильная версия	-->
+				<li role="presentation" class="active visible-xs"><a href="#orderTabAuto" data-toggle="tab" role="tab" aria-controls="orderTabAuto">Деталь</a></li>
+				<li role="presentation" class="visible-xs"><a href="#orderTabPersonal" data-toggle="tab" role="tab" aria-controls="orderTabPersonal">Связь</a></li>
+				<li role="presentation" class="visible-xs"><a href="#orderTabPay" data-toggle="tab" role="tab" aria-controls="orderTabPay">Оплата</a></li>
+			</ul>
+		</div>	
+		</div>
+		<div class="col-xs-12 col-sm-3">
+			<h4 class="modal-title hidden-xs">Заказ<span><button type="button" class="close hidden-xs" data-dismiss="modal" aria-hidden="true">×</button></span></h4>
+		</div>
+	</div>
+</div>
+	<!--Сами вкладки-->
+<div id="orderTabContainer" class="tab-content">
+	<div role="tabpanel" class="tab-pane fade in active" id="orderTabAuto">
+	<div class="container-fluid">
+		<h4 class="lead">Автомобиль</h4>
+		<form class="form-horizontal">
+<!--		Марка-модель -->
+		<div class="form-group" id="orderRowVendorAndModel">
+			<label for="orderSelectorVendor" class="col-sm-2 col-xs-12 control-label align-vertical">Марка:</label>
+			<div class="col-sm-4 col-xs-12">
+<!--						Стандартные марки-->
+				<select class="form-control select-wrapper" id="orderSelectorVendor">
+					<option>Lada</option>
+					<option>BMW</option>
+					<option>Chevrolette</option>
+					<option>VAZ</option>
+					<option>Land Rover</option>
+				</select>
+<!--						Нестандартный ввод марки-->
+				<input class="form-control hidden" type="text" value="Введите марку" id="orderInputVendor">
+			</div>
+			<span class="visible-xs">&nbsp;<br></span>
+			<label for="orderSelectorModel" class="col-sm-2 col-xs-12 control-label align-vertical">Модель:</label>
+			<div class="col-12 col-sm-4">
+
+<!--						Стандартные модели-->
+				<select class="form-control select-wrapper" id="orderSelectorModel">
+					<option>Priora</option>
+					<option>2109</option>
+					<option>2114</option>
+					<option>Priora</option>
+					<option>Vesta</option>
+				</select>
+
+<!--						Нестандартный ввод модели-->
+				<input class="form-control hidden" type="text" value="Введите модель" id="orderInputModel">
+			</div>
+		</div>
+<!--		Тумблер-->
+		<div class="form-group">
+			<div class="clearfix"></div>
+			<div class="col-xs-4 col-sm-2 text-right">
+				<label for="orderTumbler" class="switch control-label">
+					<input type="checkbox" id="orderTumbler">
+					<div class="slider round" id="orderTumblerMask"></div>
+				</label>
+			</div>
+			<div class="col-xs-8 col-sm-10 align-vertical">
+				Моей марки нет в списке
+			</div>
+		</div>
+<!--		Поколение-->
+		<div class="form-group">
+			<label for="orderInputModelType" class="col-md-2 col-xs-12 control-label align-vertical">Поколение:</label>
+			<div class="col-xs-12 col-md-10">
+				 <input class="form-control" type="text" value="XF рестайлинг" id="orderInputModelType">
+			</div>
+		</div>
+<!--		Объем двигателя -->
+		<div class="form-group">
+			<label for="orderInputEngine" class="col-md-2 col-xs-12 control-label">Объем двигателя:</label>
+			<div class="col-xs-12 col-md-10">
+				<div class="row">
+					<div class="col-xs-8">
+						<div id = "orderSliderEngine" class="align-vertical">
+							<div id="orderSlideEngineHandle" class="ui-slider-handle"></div>
+						</div>
+					</div>
+					<div class="col-xs-3">
+						<input class="form-control" type="text" value="2.0" id="orderInputEngine"> 
+					</div>
+					<div class="col-xs-1 align-vertical">л.</div>
+				</div>
+			</div>
+		</div>
+		</form> 
+	</div>
+	</div>
+	<div role="tabpanel" class="tab-pane fade" id="orderTabPersonal">
+		<p>Content 2</p>
+	</div>
+	<div role="tabpanel" class="tab-pane fade" id="orderTabPay">
+		<p>Content3</p>
+	</div>
+</div>
+</main>
+</html>

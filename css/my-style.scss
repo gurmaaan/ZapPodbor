@@ -1,0 +1,266 @@
+/* Scss Document */
+@charset "UTF-8";
+//Vars
+$global-dark-clr: #404040;
+$global-green-light-clr: #27b399;
+$global-green-dark-clr: #197262;	
+$global-gray-light-clr: #f8f8f8;
+$global-gray-light-trnsp-clr: rgba(248,248,248,0.88);
+
+$top-bg-img-pth: url(../images/top/top-background.png);
+$top-list-bg-clr: rgba(255,255,255,0.50);
+$top-attention-clr: #d18b1d;
+
+$about-bg-img-pth: url(../images/about/about-bg.png);
+
+$advantages-bg-img-pth: url(../images/advantages/advantage-bg.png);
+
+$examples-bad-clr: #F08688;
+$examples-good-clr: #79D6A1;
+
+$prices-bg-img-pth: url(../images/prices/prices-bg.png);
+
+$footer-scrlBtn-dark-clr: #535353;
+$footer-callBtn-clr: #22B925;
+
+//Functions
+@mixin bg-size ($position){ 
+	-webkit-background-size: $position;
+  	-moz-background-size: $position;
+  	-o-background-size: $position;
+  	background-size: $position;
+}
+@mixin transf ($len){
+	-webkit-transform: translateX( $len );
+  	-ms-transform: translateX( $len );
+  	transform: translateX( $len );
+}
+
+body {
+	background-color: $global-gray-light-clr;
+	header {
+		#headerContactsRight {
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+	}
+	main {
+		
+		%sec-pading {
+			padding: 30px 0px;	
+		}
+		#top {
+			background: $top-bg-img-pth no-repeat center center fixed;
+			@include bg-size(cover);
+
+			padding-bottom: 30px;
+
+			.col-xs-12 {
+				margin-top: 30px;
+				padding: 0px 10px;
+
+				&.col-sm-7 { 
+					h4 {
+						margin-bottom: 0;
+					}
+
+					#topAccordion {
+						margin-top: 36px;
+					}
+					.panel-body {
+						background-color: $top-list-bg-clr;
+						padding: 5px 15px;
+					}
+				}
+
+				&.col-sm-5 { 
+					.top-attention {
+						color: $top-attention-clr;
+					}
+					form {
+						border: thin solid black;
+						border-radius: 10px;
+						padding: 10px;
+					}
+				}
+			}
+		}
+
+		#about {
+			@extend %sec-pading;
+			background-image: $prices-bg-img-pth;
+
+			.carousel {
+				#aboutSlideAlgo {
+					.thumbnail { 
+						border: hidden;
+						background-color: transparent;
+						margin-bottom: 0;
+
+						.lead { 
+							margin-bottom: 0;
+						}
+					}
+
+					.algo-down {
+						margin: 0;
+					}
+				}
+				.carousel-control {
+					color: $global-dark-clr;
+				}
+			}
+			h5 {
+				margin-bottom: 0;
+			}
+		}
+
+		#newcommer {
+			@extend %sec-pading;
+			background-color: $global-green-light-clr;
+			color: $global-dark-clr;
+
+			h2 {
+				color: white;
+			}
+		}
+
+		#advantage {
+			@extend %sec-pading;
+			background-image: $advantages-bg-img-pth;
+		}
+
+		#examples{
+			@extend %sec-pading;
+			background-color: $global-green-light-clr;
+
+			h2 { 
+				color: $global-dark-clr;
+			}
+
+			.thumbnail {
+				border-radius: 10px;
+				background-color: $global-gray-light-trnsp-clr;
+				table {
+					 margin-bottom: 0;
+
+					.examples-bad-condition {
+						background-color: $examples-bad-clr;
+					}
+					.examples-good-condition {
+						background-color: $examples-good-clr;
+					}
+				}
+			}
+
+			.carousel-control {
+					color: $global-dark-clr;
+				}
+			a{
+				.btn {
+					margin-top: 20px;
+				}	
+			}
+		}
+
+		#prices{
+			margin-top: 30px;
+			margin-bottom: 10px;
+			background-color: $global-gray-light-clr;
+
+			.table-responsive {
+				border-radius: 10px;
+			}			
+		}
+	}
+		footer {
+			margin-bottom: 30px;
+			.navbar {
+				margin-left: 15px;
+				.navbar-nav { 
+					li {
+						a {
+							color: white;
+							&:hover {
+								color: rgb(39, 179, 153);
+							}
+							span {
+								margin-right: 7px;
+							}
+						}
+					}
+					&.navbar-custom {
+						li {
+							background-color: $global-green-dark-clr;
+							&:first-child {
+								border-right: thin solid white;
+							}
+							&:last-child {
+								border-left: thin solid white;
+							}
+
+						}
+					}
+					
+					&.navbar-right {
+						li {
+							background-color: $global-green-dark-clr;
+							&:last-child {
+								background-color: transparent;
+							}
+						}
+					}
+				}
+			}
+
+			.btn-fixed {
+				display: none;
+				position: fixed;
+				bottom: 20px;
+				z-index: 99;
+				border: none;
+				outline: none;
+				color: white;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 10px;
+				
+				&:hover {
+					background-color: $global-green-light-clr;
+				}
+			}
+			
+			#footerScrollBtn {
+				@extend .btn-fixed;
+				right: 30px;
+				background-color: $footer-scrlBtn-dark-clr;
+			}
+			
+			#footerCallBtn {
+				@extend .btn-fixed;
+				left: 30px;
+				background-color: $footer-callBtn-clr; 
+			}
+		}
+
+		#more {
+
+		}
+
+		#call {
+			.call-margin-fix {
+  				margin: inherit;
+			} 
+		}
+		
+		#mail {
+			.mail-margin-fix {
+					margin: inherit;
+				}
+			textarea {
+				width: 100%;
+				text-indent: 1.0em;
+//				margin-bottom: 15px;
+			}
+		}
+}

@@ -1,0 +1,654 @@
+
+<html>
+<main>
+<!--	Шапка сайта-->
+		<section id="top">
+			<div class="container-fluid center-block">
+				<div class="row">
+			<!--	Левая колонка со списком -->
+					<div class="col-xs-12 col-sm-7">
+						<h2 class="text-center">Опять сломалась машина?</h2>
+
+						<h4>Подберем лучшие предложения автозапчастей по:</h4>
+			<!--				Акордеон-->
+						<div class="panel-group" id="topAccordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#topAccordion" href="#topPriceCollapse">
+											<span class="glyphicon glyphicon-ok-circle"></span>
+												<strong>Цене</strong>
+											<span class="glyphicon glyphicon-menu-down visible-xs pull-right"></span>
+										</a>
+									</h3>
+								</div>
+								<div id="topPriceCollapse" class="panel-collapse collapse ">
+									<div class="panel-body">Самые выгодные предложения на рынке</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#topAccordion" href="#topQualityCollapse">
+											<span class="glyphicon glyphicon-ok-circle"></span>
+												<strong>Качеству</strong>
+											<span class="glyphicon glyphicon-menu-down visible-xs pull-right"></span>
+										</a>
+									</h3>
+								</div>
+								<div id="topQualityCollapse" class="panel-collapse collapse ">
+									<div class="panel-body">Проверенные и надежные поставщики</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#topAccordion" href="#topTimeCollapse">
+											<span class="glyphicon glyphicon-ok-circle"></span> 
+												<strong>Срокам доставки</strong>
+											<span class="glyphicon glyphicon-menu-down visible-xs pull-right"></span>
+										</a>
+									</h3>
+								</div>
+								<div id="topTimeCollapse" class="panel-collapse collapse ">
+									<div class="panel-body">Запчасти в наличии на складе</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+			<!--	Правая колонка с формой -->
+					<div class="col-xs-12 col-sm-5">
+						<form>
+							<div class="form-heading">
+								<h2 class="text-center">ОСТАВЬТЕ ЗАЯВКУ</h2>
+								<h4 class="text-center">И мы подберем для Вас <span class="top-attention">лучшие</span> запчасти</h4>
+							</div>
+							<div class="form-content">
+								<div class="form-group form-group-lg">
+									<div class="input-group">	
+										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+										<input tabindex="1" type="text" class="form-control" placeholder="Имя" id="topInputName">
+									</div>
+								</div>
+								<div class="form-group form-group-lg">
+									<div class="input-group">	
+										<span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+										<a href="#" tabindex="1" data-toggle="popover" class="tel-input-helper">
+											<input type="tel" class="form-control tel-input" placeholder="Телефон" id="toplInputTel">
+										</a>
+									</div>
+								</div>
+								<p class="text-center"><a tabindex="3" href="/order.html" class="show-page btn btn-success btn-lg text-center">ОСТАВИТЬ ЗАЯВКУ</a></p> 
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+<!--	Слайдер: алгоритм + решаемые проблемы-->
+		<section id="about">
+<!--		Объявление слайдера-->
+			<div id="aboutCarousel" class="carousel slide" data-interval="false" data-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+<!--				Слайд Алгоритм-->
+					<div class="item active about-need-mh" id="aboutSlideAlgo" >		
+					<div class="container center-block text-center" >
+						<h2 class="text-center">Как сделать жизнь проще?</h2>
+						<div class="row text-center center-block">
+
+<!--						Пустая колонка для выравнивания по горизонтали-->
+							<div class="col-sm-1 hidden-xs">
+								<p>&nbsp;</p>
+								<h1>&nbsp;</h1>
+								<p>&nbsp;</p>
+							</div>
+<!--						Блок "сделать заказа"-->
+							<div class="col-xs-12 col-sm-2">
+								<div class="thumbnail"> 
+									<img src="images/about/algo-order.png">
+									<div class="caption">
+										<h3 class="lead text-center">Сделать заказ на сайте <strong> ZapPodbor.ru </strong></h3>
+									</div>
+								</div>
+							</div>
+
+<!--						Стрелка вправо горизонтальная -->
+							<div class="col-sm-2 hidden-xs">
+								<h1 class="text-center glyphicon glyphicon-menu-right"></h1>
+							</div>
+<!--						Стрелка вниз вертикальная -->
+							<div class="col-xs-12 visible-xs center-block"> 
+								<h1 class="text-center algo-down glyphicon glyphicon-menu-down"></h1>
+							</div>
+							
+<!--						Блок "специалист"-->
+							<div class="col-xs-12 col-sm-2">
+								<div class="thumbnail"> 
+									<img src="images/about/algo-operator.png">
+									<div class="caption">
+										<h3 class="lead text-center">Специалист проверит все предложения</h3>
+									</div>
+								</div>
+							</div>
+							
+<!--						Стрелка вправо горизонтальная -->
+							<div class="col-sm-2 hidden-xs">
+								<h1 class="text-center glyphicon glyphicon-menu-right"></h1>
+							</div>
+<!--						Стрелка вниз вертикальная -->
+							<div class="col-xs-12 visible-xs  center-block"> 
+								<h1 class="text-center algo-down glyphicon glyphicon-menu-down"></h1>
+							</div>
+
+							<div class="col-xs-12 col-sm-2">
+								<div class="thumbnail"> 
+								<img src="images/about/algo-mail.png">
+									<div class="caption">
+										<h3 class="lead text-center">Получить письмо с лучшими вариантами</h3>
+									</div>
+								</div>
+							</div>
+							
+<!--						Пустая колонка для выравнивания по горизонтали-->
+							<div class="col-sm-1 hidden-xs">
+								<p>&nbsp;</p>
+								<h1>&nbsp;</h1>
+								<p>&nbsp;</p>
+							</div>
+						</div>
+					</div>	
+					</div>
+					
+<!--				Слайд Проблемы-->
+					<div class="item about-need-mh" id="aboutSlideProblem" >
+					<div class="container center-block" >
+						<h2 class="text-center">Когда обзвонил 100 магазинов и потратил 3 часа:</h2>
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-6">
+									<div class="media hidden-lg text-center">
+										<div class="media-middle">
+											<img src="images/about/problem-money.png" class="center-block img-responsive">
+										</div>
+										<div class="media-body text-center">
+											<h5 class="media-heading">Оригинал – очень дорого</h5>
+											<p>Плюс доставка, плюс налоги, плюс «на пиво»</p>
+										</div>
+									</div>
+
+									<div class="media visible-lg">
+										<div class="media-middle">
+											<img src="images/about/problem-money.png" class="pull-right img-responsive">
+										</div>
+										<div class="media-body text-right">
+											<h5 class="media-heading"><br>Оригинал – очень дорого</h5>
+											<p>Плюс доставка, плюс налоги, плюс «на пиво»</p>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-xs-6">
+									<div class="media hidden-lg text-center">
+										<div class="media-middle">
+											<img src="images/about/problem-calendar.png" class="center-block img-responsive">
+										</div>
+										<div class="media-body text-center">
+											<h5 class="media-heading">Аналог – ждать 3 недели</h5>
+											<p>Написано что 2 дня!!!</p>
+										</div>
+									</div>
+
+									<div class="media visible-lg">
+										<div class="media-middle">
+											<img src="images/about/problem-calendar.png" class="pull-left img-responsive">
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading"><br>Аналог – ждать 3 недели</h5>
+											<p>Написано что 2 дня!!!</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="clearfix"></div>
+
+								<div class="col-xs-6">
+									<div class="media hidden-lg text-center">
+										<div class="media-middle">
+											<img src="images/about/problem-trash.png" class="img-responsive center-block">
+										</div>
+										<div class="media-body text-center">
+											<h5 class="media-heading">Б/У – недопустимые дефекты</h5>
+											<p>А написали в идеальном состоянии!!!</p>
+										</div>
+									</div>
+
+									<div class="media visible-lg">
+										<div class="media-middle">
+											<img src="images/about/problem-trash.png" class="pull-right img-responsive">
+										</div>
+										<div class="media-body text-right">
+											<h5 class="media-heading"><br>Б/У – недопустимые дефекты</h5>
+											<p>А написали в идеальном состоянии!!!</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-6">
+									<div class="media hidden-lg text-center">
+										<div class="media-middle">
+											<img src="images/about/problem-disable.png" class="center-block img-responsive">
+										</div>
+										<div class="media-body text-center">
+											<h5 class="media-heading">Нигде нет в наличии</h5>
+											<p>А на сайте «есть на складе»!!!</p>
+										</div>
+									</div>
+
+									<div class="media visible-lg">
+										<div class="media-middle">
+											<img src="images/about/problem-disable.png" class="pull-left img-responsive">
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading"><br>Нигде нет в наличии</h5>
+											<p>А на сайте «есть на складе»!!!</p>
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+					</div>	
+				</div>
+<!--			Кнопки слайдера -->
+				<a class="left carousel-control hidden" href="#aboutCarousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control hidden" href="#aboutCarousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span>
+				</a>
+			</div>
+
+			<a href="#more" data-toggle="modal" class="show-window"><h5 class="text-center">Узнать подробнее</h5></a>
+		</section>
+<!--	Надпись внимания к клиентам-->
+		<section id="newcommer" >
+			<div class="text-center">
+			  <h2>Каждый клиент для нас особенный</h2>      
+			  <h4>МЫ ОТКРЫЛИСЬ НЕДАВНО, ПОЭТОМУ УДЕЛЯЕМ ВНИМАНИЕ КАЖДОЙ МЕЛОЧЕ</h4>
+			  <a href="/order.html" class="btn btn-lg btn-success show-page" role="button">Попробовать</a>
+			</div>
+		</section>
+<!--	Преимущества-->
+		<section id="advantage">
+			<div class="container-fluid">
+					<h2 class="text-center">Почему стоит обратиться к нам</h2>
+					<div class="row">
+
+					<div class="col-xs-6 col-sm-4">
+						<div class="media hidden-lg text-center">
+							<div class="media-middle">
+								<img src="images/advantages/advantage-dollar.png" class="center-block img-responsive">
+							</div>
+							<div class="media-body text-center">
+								<h5 class="media-heading">Экономия средств</h5>
+								<p class="hidden-xs">Найдем запчасти по низким ценам</p>
+							</div>
+						</div>
+
+						<div class="media visible-lg">
+							<div class="media-middle">
+								<img src="images/advantages/advantage-dollar.png" class="pull-left img-responsive">
+							</div>
+							<div class="media-body">
+								<h5 class="media-heading"> <br>Экономия средств</h5>
+								<p>Найдем запчасти по низким ценам</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-4">
+						<div class="media hidden-lg text-center">
+							<div class="media-middle">
+								<img src="images/advantages/advantage-prof.png" class="center-block img-responsive">
+							</div>
+							<div class="media-body text-center">
+								<h5 class="media-heading">Профессионализм</h5>
+								<p class="hidden-xs">Больше 3-х лет на рынке автозапчастей</p>
+							</div>
+						</div>
+
+						<div class="media visible-lg">
+							<div class="media-middle">
+								<img src="images/advantages/advantage-prof.png" class="pull-left img-responsive">
+							</div>
+							<div class="media-body">
+								<h5 class="media-heading"><br>Профессионализм</h5>
+								<p>Больше 3-х лет на рынке автозапчастей</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="clearfix visible-xs"></div>
+
+					<div class="col-xs-6 col-sm-4">
+						<div class="media hidden-lg text-center">
+							<div class="media-middle">
+								<img src="images/advantages/advantage-coast.png" class="center-block img-responsive">
+							</div>
+							<div class="media-body text-center">
+								<h5 class="media-heading">Низкие цены</h5>
+								<p class="hidden-xs">Подбор запчастей от 250р.<a href="#prices"> Тарифы</a></p>
+							</div>
+						</div>
+
+						<div class="media visible-lg">
+							<div class="media-middle">
+								<img src="images/advantages/advantage-coast.png" class="pull-left img-responsive">
+							</div>
+							<div class="media-body">
+								<h5 class="media-heading"><br>Низкие цены</h5>
+								<p>Подбор запчастей от 250р.<a href="#prices" class="toAnchor"> Тарифы</a></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="clearfix hidden-xs"></div>
+
+					<div class="col-xs-6 col-sm-4">
+						<div class="media hidden-lg text-center">
+							<div class="media-middle">
+								<img src="images/advantages/advantage-timme.png" class="center-block img-responsive">
+							</div>
+							<div class="media-body text-center">
+								<h5 class="media-heading">Экономия времени</h5>
+								<p class="hidden-xs">Не трать время на звонки в магазины</p>
+							</div>
+						</div>
+
+						<div class="media visible-lg">
+							<div class="media-middle">
+								<img src="images/advantages/advantage-timme.png" class="pull-left img-responsive">
+							</div>
+							<div class="media-body">
+								<h5 class="media-heading"><br>Экономия времени</h5>
+								<p>Не трать время на звонки в магазины</p>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix visible-xs"></div>
+
+					<div class="col-xs-6 col-sm-4">
+						<div class="media hidden-lg text-center">
+							<div class="media-middle">
+								<img src="images/advantages/advantage-calendar.png" class="center-block img-responsive">
+							</div>
+							<div class="media-body text-center">
+								<h5 class="media-heading">Кратчайшие сроки поставки</h5>
+								<p class="hidden-xs">Найдем в наличии на складе за пару часов</p>
+							</div>
+						</div>
+
+						<div class="media visible-lg">
+							<div class="media-middle">
+								<img src="images/advantages/advantage-calendar.png" class="pull-left img-responsive">
+							</div>
+							<div class="media-body">
+								<h5 class="media-heading"><br>Кратчайшие сроки поставки</h5>
+								<p>Найдем в наличии на складе за пару часов</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-4">
+						<div class="media hidden-lg text-center">
+							<div class="media-middle">
+								<img src="images/advantages/advantage-delivery.png" class="center-block img-responsive">
+							</div>
+							<div class="media-body text-center">
+								<h5 class="media-heading">Надежная доставка</h5>
+								<p class="hidden-xs">Только проверенные ТК</p>
+							</div>
+						</div>
+
+						<div class="media visible-lg">
+							<div class="media-middle">
+								<img src="images/advantages/advantage-delivery.png" class="pull-left img-responsive">
+							</div>
+							<div class="media-body">
+								<h5 class="media-heading"><br>Надежная доставка</h5>
+								<p>Только проверенные ТК</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+<!--	Пример работы-->
+		<section id="examples" >
+			<div class="container-fluid text-center">
+				<h2 class="text-center">Решенные задачи</h2>
+<!--				Desktop-->
+				<div class="row hidden-xs">
+					<div class="col-sm-4" >
+						<div class="thumbnail example-card-need-mh">
+							<img src="images/examples/example-bmwm5.png" class="img-responsive">
+							<div class="caption">
+								<h3>Сцепление <br>BMW M5</h3>
+								<div class="well">
+									<table width="100%" border="1" cellspacing="0">
+										<tbody>
+											<tr>
+												<td width="60%;">В среднем ждать</td>
+												<td class="examples-bad-condition"><strong>18 дней</strong></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="well">
+									<table width="100%" border="1" cellspacing="0">
+										<tbody>
+											<tr>
+												<td width="60%;">Нашли</td>
+												<td class="examples-good-condition"><strong>В наличии</strong></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4" >
+						<div class="thumbnail example-card-need-mh">
+							<img src="images/examples/example-porshcheca.png" class="img-responsive">
+							<div class="caption">
+								<h3>Фары <br>Porsche Cayenne</h3>
+								<div class="well">
+									<table width="100%" border="1" cellspacing="0">
+										<tbody>
+											<tr>
+												<td width="60%;">Средняя цена</td>
+												<td class="examples-bad-condition"><strong>72 000р</strong></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="well">
+									<table width="100%" border="1" cellspacing="0">
+										<tbody>
+											<tr>
+												<td width="60%;">Нашли за</td>
+												<td class="examples-good-condition"><strong>~54 000р</strong></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>	
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4" >
+						<div class="thumbnail example-card-need-mh">
+							<img src="images/examples/example-lexus.png" class="img-responsive">
+							<div class="caption">
+								<h3>Дроссельная заслонка <br> Lexus NX</h3>
+								<div class="well">
+									<table width="100%" border="1" cellspacing="0">
+										<tbody>
+											<tr>
+												<td width="60%;">Средняя цена</td>
+												<td class="examples-bad-condition"><strong>51 000р</strong><br></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="well">
+									<table width="100%" border="1" cellspacing="0">
+										<tbody>
+											<tr>
+												<td width="60%;">Нашли за</td>
+												<td class="examples-good-condition"><strong>~38 000р</strong></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+<!--				Mobile-->
+				<div id="examplesCarousel" class="carousel slide visible-xs" data-ride="carousel">
+					<div class="carousel-inner example-need-mh" role="listbox">
+						<div class="item active example-need-mh" >
+						<div class="thumbnail">
+							<img src="images/examples/example-bmwm5.png" class="img-responsive">
+							<div class="caption">
+								<h3>Сцепление <br> BMW M5</h3>
+								<div class="well">
+									<table width="100%" border="1" cellspacing="0" >
+										<tbody>
+											<tr>
+												<td width="60%;">В среднем ждать</td>
+												<td class="examples-bad-condition"><strong>18 дней</strong></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="well">
+									<table width="100%" border="1" cellspacing="0" >
+										<tbody>
+											<tr>
+												<td width="60%;">Нашли</td>
+												<td class="examples-good-condition"><strong>В наличии</strong></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						</div>
+						<div class="item example-need-mh" >
+						<div class="thumbnail ">
+							<img src="images/examples/example-porshcheca.png" class="img-responsive">
+							<div class="caption">
+								<h3>Фары <br> Porsche Cayenne</h3>
+								<div class="well">
+									<table width="100%" border="1" cellspacing="0" >
+										<tbody>
+											<tr>
+												<td width="60%;">Средняя цена</td>
+												<td class="examples-bad-condition"><strong>72 000р</strong></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="well">
+									<table width="100%" border="1" cellspacing="0" >
+										<tbody>
+											<tr>
+												<td width="60%;">Нашли за</td>
+												<td class="examples-good-condition"><strong>~54 000р</strong></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>	
+							</div>
+						</div>
+						</div>
+						<div class="item example-need-mh">
+						<div class="thumbnail ">
+							<img src="images/examples/example-lexus.png" class="img-responsive">
+							<div class="caption">
+								<h3>Дроссельная заслонка <br> Lexus NX</h3>
+								<div class="well">
+									<table width="100%" border="1" cellspacing="0" >
+										<tbody>
+											<tr>
+												<td width="60%;">Средняя цена</td>
+												<td class="examples-bad-condition"><strong>51 000р</strong><br></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="well">
+									<table width="100%" border="1" cellspacing="0" >
+										<tbody>
+											<tr>
+												<td width="60%;">Нашли за</td>
+												<td class="examples-good-condition"><strong>~38 000р</strong></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+						</div>
+						</div>
+					</div>
+
+					<a class="left carousel-control visible-xs" href="#examplesCarousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control visible-xs" href="#examplesCarousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span>
+					</a>
+				</div>
+
+				<a href="/order.html" class="btn btn-lg btn-success text-center show-page" role="button">Хочу также</a>
+			</div>
+		</section>
+<!--	Прайс-лист-->
+		<section id="prices">
+			<div class="container-fluid center-block">
+				<h2 align = "center">Тарифы</h2>
+				<div class="table-responsive" id="pricesTable" >          
+					<table class="table">
+						<thead>
+							<tr>
+								<th width="20%">Количество</th>
+								<th>Цена</th>
+								<th >Время</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<th >1 - 4 </th>
+								<td>300 р/шт</td>
+								<td>2 часа </td>
+							</tr>
+							<tr>
+								<th >5 - 9 </th>
+								<td>270 р/шт</td>
+								<td>4 часа</td>
+							</tr>
+							<tr>
+								<th >10+</th>
+								<td>250 р/шт</td>
+								<td>уточняйте</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+	</main>
+</html>

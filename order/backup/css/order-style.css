@@ -1,0 +1,69 @@
+/* line 16, order-style.scss */
+body {
+  background-color: white;
+  padding: 30px; }
+  /* line 19, order-style.scss */
+  body .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px; }
+    /* line 25, order-style.scss */
+    body .switch input {
+      display: none; }
+  /* line 30, order-style.scss */
+  body .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s; }
+    /* line 39, order-style.scss */
+    body .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s; }
+    /* line 49, order-style.scss */
+    body .slider .round {
+      border-radius: 34px; }
+      /* line 52, order-style.scss */
+      body .slider .round:before {
+        border-radius: 50%; }
+  /* line 59, order-style.scss */
+  body input:checked + .slider {
+    background-color: #27b399; }
+    /* line 62, order-style.scss */
+    body input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px); }
+  /* line 68, order-style.scss */
+  body input:focus + .slider {
+    box-shadow: 0 0 1px #27b399; }
+  /* line 73, order-style.scss */
+  body #orderTabContainer {
+    margin-top: 10px; }
+    /* line 76, order-style.scss */
+    body #orderTabContainer .form-group {
+      margin-bottom: 15px; }
+    /* line 80, order-style.scss */
+    body #orderTabContainer .align-vertical {
+      padding-top: 5px; }
+    /* line 84, order-style.scss */
+    body #orderTabContainer #orderSlideEngineHandle {
+      width: 3em;
+      height: 1.6em;
+      top: 50%;
+      margin-top: -.8em;
+      text-align: center;
+      line-height: 1.6em; }

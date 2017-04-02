@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>McKinsey tool</title>
+<meta charset="utf-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.0/jspdf.plugin.autotable.js"></script>
+</head>
+
+<body>
+<h3>Employee type:</h3>
+<input type="radio" name="employee_type" value="internal">
+Internal
+<input type="radio" name="employee_type" value="external">
+Exteranal
+<input type="radio" name="employee_type" value="external_10">
+External 10
+<h3>Input format</h3>
+<p id="input-format"></p>
+<textarea id="user-input" style="display: block;" rows="25"></textarea>
+<button id="btn-process" type="button">Process</button>
+<script> 
+			var lastFMNO = undefined; // HOTFIX: Save .pdf with filename '<FMNO>.pdf'
+			var parsers = {
+				'internal': {
+					re: /^ *Name *(.+)FMNO *(\d+)Position *(.+)Start date *(.+)GOC *(.+) *$/, 
+					formatDescr: 'A copy of table: name, FMNO, Position, Start date, GOC',
+					tableRows: function(match) {
+						var fmno = match[2];
+						var name = match[1];
+
+						lastFMNO = fmno;
+
+						return [
+				    		['USERNAME:', name],
+				    		['PASSWORD:', 'mckinsey+' + fmno],
+				    		['FMNO:', fmno]
+						];
+					} 
+				}, 
+				'external': {
+					re: /^ *(\d+) *$/, 
+					formatDescr: 'FMNO',
+					tableRows: function(match) {
+						var fmno = match[1]; 
+
+						lastFMNO = fmno;
+
+						return [
+						    ['Your FMNO:', fmno],
+						    ['Startup password (drivelock):', 'mck' + fmno],
+						    ['Windows password:', 'mckinsey+' + fmno]
+						];
+					}
+				},
+				'external_10': {
+					re: /^ *(.+) +(\d+) *$/,
+					formatDescr: 'Name and FMNO',
+					tableRows: function(match) {
+						var name = match[1];
+						var fmno = match[2];
+
+						lastFMNO = fmno;
+
+						return [
+				    		['USERNAME:', name],
+				    		['PASSWORD:', 'mckinsey+' + fmno],
+				    		['FMNO:', fmno]
+						];
+					}
+				}
+			}
+
+			function getEmployeeType() {
+				var radios = document.getElementsByName('employee_type');
+
+				for (var i = 0, length = radios.length; i < length; i++) 
+				    if (radios[i].checked) 
+				        return radios[i].value;
+
+				return undefined;
+			} 
+
+			function getTextareaInput() {
+				return document.getElementById('user-input').value.replace(/(\n\r|\n|\r)/gm, '').replace(/\t/gm, '');	
+			}
+
+			function processInput(parser) {
+				var match = getTextareaInput().match(parser.re);
+
+				if (match === null) 
+					alert('Bad input format'); 
+				else {
+					var doc = new jsPDF();
+				
+					doc.autoTable(['TYPE', 'value'], parser.tableRows(match), {
+	    				styles: {fillColor: [255, 255, 255]},
+	    			});
+				
+					return doc;
+				}				
+			}
+
+			window.onload = function() {
+				document.getElementById('btn-process').onclick = function() {
+					var employeeType = getEmployeeType(); 
+
+					if (employeeType === undefined) 
+						alert('Employee type not selected');
+					else {
+						var pdf = processInput(parsers[employeeType]);
+						pdf.autoPrint();
+						pdf.save(`${lastFMNO}.pdf`);
+					}
+				}  
+
+				var radios = document.getElementsByName('employee_type'); 
+
+				for (var i = 0; i < radios.length; i++) 
+					radios[i].onclick = function() {
+						document.getElementById('input-format').innerHTML = parsers[this.value].formatDescr; 
+					}
+
+				radios[0].click();	
+			}
+		</script> 
+
+<!-- Yandex.Metrika counter --> 
+<script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter42900509 = new Ya.Metrika({ id:42900509, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); 
+</script>
+	<noscript>
+		<div>
+			<img src="https://mc.yandex.ru/watch/42900509" style="position:absolute; left:-9999px;" alt="" />
+		</div>
+	</noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>

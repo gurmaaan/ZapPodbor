@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<!--Сужебная информация-->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<!--Заголовок-описание-ключевые слова-->
+	<title>Оформление заказа</title>
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	
+<!--Иконки сайта-->
+	<link rel="apple-touch-icon" sizes="180x180" href="../images/logo/icon/apple-touch-icon.png"> 
+	<link rel="icon" type="image/png" href="../images/logo/icon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../images/logo/icon/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="../images/logo/icon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../images/logo/icon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../images/logo/icon/manifest.json">
+	<link rel="mask-icon" href="../images/logo/icon/safari-pinned-tab.svg" color="#27b399">
+	<link rel="shortcut icon" href="../images/logo/icon/favicon.ico">
+	<meta name="apple-mobile-web-app-title" content="ZapPodbor - автозапчасти ">
+	<meta name="application-name" content="ZapPodbor - автозапчасти ">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="msapplication-TileImage" content="../images/logo/icon/mstile-144x144.png">
+	<meta name="msapplication-config" content="../images/logo/icon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	
+<!--Стили-->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../css/emmet-style.min.css">
+	<link rel="alternate" href="../css/my-style.scss">
+	<link rel="stylesheet" href="../css/my-style.css">
+	<link rel="alternate" href="css/order-style.scss">
+	<link rel="stylesheet" href="css/order-style.css">
+	
+<!--Скрипты:-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="../js/jquery.mobile.custom.js"></script>
+	<script src="../js/jquery.maskedinput.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="js/order.js"></script>
+</head>
+	<body>
+<!--Хедер-->
+	<header>
+		<nav class="navbar navbar-fixed-top navbar-default">
+		<div class="container-fluid">
+		<div class="navbar-header">
+<!--		Логотип слева-->
+			<a class="navbar-brand toAnchor" href="http://zappodbor.ru"><strong>ПОДБОР АВТОЗАПЧАСТЕЙ</strong></a>
+
+<!--		Кнопка с полосочками на мобилках-->
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#headerMainNavbar" id="headerMenuBtn">
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span> 
+			</button>	
+		</div>
+
+		<div class="collapse navbar-collapse" id="headerMainNavbar">
+<!--		Главное меню-->
+			<ul class="nav navbar-nav" id="headerMainMenu">
+				<li><a class="toAnchor" href="http://zappodbor.ru#about">Схема работы</a></li>
+				<li><a class="toAnchor" href="http://zappodbor.ru#advantage">Преимущества</a></li>
+				<li><a class="toAnchor" href="http://zappodbor.ru#examples">Решенные задачи</a></li>
+				<li><a class="toAnchor" href="http://zappodbor.ru#prices">Стоимость</a></li>
+				<li><a class="toAnchor" href="http://zappodbor.ru"><strong>На главную</strong></a></li>
+			</ul>
+
+<!--		Плавающие контакты-->
+			<ul class="nav navbar-nav navbar-right" id="headerNavbarRight">
+<!--			Контакты справа на компе (в меню на мобилках)-->
+				<li id="headerContactsRight" class="hidden">
+					<ul>
+<!--					Подсписок не удалять, нужно для вертикального выравнивания-->
+						<li class="phone-wrapper toAnchor">телефон: <b>+7 (495) 228-14-88</b></li>
+						<li class="address-wrapper">e-mail: <b>vopros@zappodbor.ru</b></li>
+					</ul>
+				</li>
+<!--			Нижние контакты в одну полоску-->
+				<li id="headerContactsBottom" class="hidden"> 
+					<span class="phone-wrapper toAnchor">телефон: &nbsp;<b>+7 (495) 228-14-88</b></span>
+					<span class="address-wrapper">e-mail: &nbsp;<b>vopros@zappodbor.ru</b></span>
+				</li>
+			</ul>
+		</div>
+		</div>
+		</nav>
+	</header>  
+	<main>
+<!--Хедер табов-->
+	<div class="container-fluid">
+		<button type="button" class="close visible-xs" data-dismiss="modal" aria-hidden="true">×</button>
+		<div class="row">
+			<div class="col-xs-10 col-sm-9">
+	<!--			Верхние вкладки (табы)-->
+			<div role="tabpanel">
+				<ul class="nav nav-tabs" role="tablist">
+	<!--					Вкладки таб-панели дестоп версия	-->
+					<li role="presentation" class="active hidden-xs"><a href="#orderTabAuto" data-toggle="tab" role="tab" aria-controls="orderTabAuto">Запчасть для поиска</a></li>
+					<li role="presentation" class="hidden-xs"><a href="#orderTabPersonal" data-toggle="tab" role="tab" aria-controls="orderTabPersonal">Личные данные</a></li>
+					<li role="presentation" class="hidden-xs"><a href="#orderTabPay" data-toggle="tab" role="tab" aria-controls="orderTabPay">Оплата</a></li>
+
+	<!--					Вкладки таб-панели мобильная версия	-->
+					<li role="presentation" class="active visible-xs"><a href="#orderTabAuto" data-toggle="tab" role="tab" aria-controls="orderTabAuto">Деталь</a></li>
+					<li role="presentation" class="visible-xs"><a href="#orderTabPersonal" data-toggle="tab" role="tab" aria-controls="orderTabPersonal">Связь</a></li>
+					<li role="presentation" class="visible-xs"><a href="#orderTabPay" data-toggle="tab" role="tab" aria-controls="orderTabPay">Оплата</a></li>
+				</ul>
+			</div>	
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<h4 class="modal-title hidden-xs">Заказ<span><button type="button" class="close hidden-xs" data-dismiss="modal" aria-hidden="true">×</button></span></h4>
+			</div>
+		</div>
+	</div>
+	<!--Сами вкладки-->
+	<div id="orderTabContainer" class="tab-content">
+		<div role="tabpanel" class="tab-pane fade in active" id="orderTabAuto">
+		<div class="container-fluid">
+			<h4 class="lead">Автомобиль</h4>
+			<form class="form-horizontal">
+<!--		Марка-модель -->
+			<div class="form-group" id="orderRowVendorAndModel">
+				<label for="orderSelectorVendor" class="col-sm-2 col-xs-12 control-label align-vertical">Марка:</label>
+				<div class="col-sm-4 col-xs-12">
+<!--						Стандартные марки-->
+					<select class="form-control select-wrapper" id="orderSelectorVendor">
+						<option>Lada</option>
+						<option>BMW</option>
+						<option>Chevrolette</option>
+						<option>VAZ</option>
+						<option>Land Rover</option>
+					</select>
+<!--						Нестандартный ввод марки-->
+					<input class="form-control hidden" type="text" value="Введите марку" id="orderInputVendor">
+				</div>
+				<span class="visible-xs">&nbsp;<br></span>
+				<label for="orderSelectorModel" class="col-sm-2 col-xs-12 control-label align-vertical">Модель:</label>
+				<div class="col-12 col-sm-4">
+
+<!--						Стандартные модели-->
+					<select class="form-control select-wrapper" id="orderSelectorModel">
+						<option>Priora</option>
+						<option>2109</option>
+						<option>2114</option>
+						<option>Priora</option>
+						<option>Vesta</option>
+					</select>
+
+<!--						Нестандартный ввод модели-->
+					<input class="form-control hidden" type="text" value="Введите модель" id="orderInputModel">
+				</div>
+			</div>
+<!--		Тумблер-->
+			<div class="form-group">
+				<div class="clearfix"></div>
+				<div class="col-xs-4 col-sm-2 text-right">
+					<label for="orderTumbler" class="switch control-label">
+						<input type="checkbox" id="orderTumbler">
+						<div class="slider round" id="orderTumblerMask"></div>
+					</label>
+				</div>
+				<div class="col-xs-8 col-sm-10 align-vertical">
+					Моей марки нет в списке
+				</div>
+			</div>
+<!--		Поколение-->
+			<div class="form-group">
+				<label for="orderInputModelType" class="col-md-2 col-xs-12 control-label align-vertical">Поколение:</label>
+				<div class="col-xs-12 col-md-10">
+					 <input class="form-control" type="text" value="XF рестайлинг" id="orderInputModelType">
+				</div>
+			</div>
+<!--		Объем двигателя -->
+			<div class="form-group">
+				<label for="orderInputEngine" class="col-md-2 col-xs-12 control-label">Объем двигателя:</label>
+				<div class="col-xs-12 col-md-10">
+					<div class="row">
+						<div class="col-xs-8">
+							<div id = "orderSliderEngine" class="align-vertical">
+								<div id="orderSlideEngineHandle" class="ui-slider-handle"></div>
+							</div>
+						</div>
+						<div class="col-xs-3">
+							<input class="form-control" type="text" value="2.0" id="orderInputEngine"> 
+						</div>
+						<div class="col-xs-1 align-vertical">л.</div>
+					</div>
+				</div>
+			</div>
+			</form> 
+		</div>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="orderTabPersonal">
+			<p>Content 2</p>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="orderTabPay">
+			<p>Content3</p>
+		</div>
+	</div>
+	</main>
+	<!--Футер-->
+	<footer>
+<!--Кипирайт-->
+	<p class="text-center" id="footerCopyright">© Подбор автозапчастей 2016-2017. Все права защищены</p>
+	<div class="container-fluid">
+<!--Футер десктоп-->
+	<nav class="navbar navbar-fixed-bottom hidden-xs" id="footerDesktopNavbar">
+		<ul class="nav navbar-nav navbar-custom text-center">
+			<li><a data-toggle="modal" href="#call" class="footer-btns"><span class="glyphicon glyphicon-phone"></span>Заказать звонок</a></li>
+			<li><a data-toggle="modal" href="#mail" class="footer-btns"><span class="glyphicon glyphicon-envelope"></span>Написать сообщение</a></li>
+		</ul>
+	</nav>
+	
+<!--Футер мобилы -->
+<!--	Кнопка позвонить-->
+	<a href="#call" class="btn toAnchor visible-xs" data-toggle="modal" role="button" id="footerCallBtn">
+		<span class="glyphicon glyphicon-earphone"></span>
+	</a>
+	</div>
+	</footer>
+	
+	<!--Окно перезвона-->
+	<div id="call" class="modal fade">
+	<div class="modal-dialog modal-sm">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="callBtnClose">×</button>
+			<h4 class="modal-title">Заказ звонка</h4> 
+		</div>
+		
+		<div class="modal-body">
+			<form id="callForm">
+				<div class="form-group">
+					<div class="input-group">	
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+						<input tabindex="0" type="text" class="form-control" placeholder="Имя" id="callInputName">
+					</div>
+				</div>
+				<div class="form-group call-margin-fix">
+					<div class="input-group">	
+						<span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+						<a tabindex="1" data-toggle="popover" class="tel-input-helper">
+							<input tabindex="1" type="tel" class="form-control tel-input" placeholder="Телефон" id="callInputTel">
+						</a>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		<div class="modal-footer">
+			<p class="text-center call-margin-fix">
+				<a class="btn btn-success text-center" aria-hidden="true"  data-dismiss="modal" id="callBtnSubmit" >ПЕРЕЗВОНИТЬ МНЕ</a>
+			</p> 	
+		</div>
+	</div>
+	</div>
+	</div>
+<!--Окно письмо-->
+	<div id="mail" class="modal fade">
+	<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h4 class="modal-title">Сообщение</h4>
+		</div>
+
+		<div class="modal-body">
+		<form>
+			<div class="form-group form-group">
+				<div class="input-group">	
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+					<input tabindex="0" type="text" class="form-control" placeholder="Имя" id="mailInputName">
+				</div>
+			</div>
+			<div class="form-group form-group">
+				<div class="input-group">	
+					<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+					<a tabindex="1" data-toggle="popover" class="mail-input-helper">
+						<input type="text" class="form-control mail-input" placeholder="e-mail" id="mailInputMail">
+					</a>
+				</div>
+			</div>
+			<div class="form-group form-group mail-margin-fix">	
+				<textarea rows="10" placeholder="Сообщение"></textarea>
+			</div>
+		</form>
+		</div>
+		<div class="modal-footer">
+			<p class="text-center mail-margin-fix"><a tabindex="2" href="order" class="btn btn-success btn-lg text-center" data-toggle="modal">ОТПРАВИТЬ</a></p> 
+		</div>
+	</div>
+	</div>
+	</div>
+	</body>
+</html>

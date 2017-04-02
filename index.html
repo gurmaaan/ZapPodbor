@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!--Сужебная информация-->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<!--Заголовок-описание-ключевые слова-->
+	<title>ZapPodbor.ru - подбор автозапчастей</title>
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	
+<!--Иконки сайта-->
+	<link rel="apple-touch-icon" sizes="180x180" href="images/logo/icon/apple-touch-icon.png"> 
+	<link rel="icon" type="image/png" href="images/logo/icon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/logo/icon/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="images/logo/icon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="images/logo/icon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="images/logo/icon/manifest.json">
+	<link rel="mask-icon" href="images/logo/icon/safari-pinned-tab.svg" color="#27b399">
+	<link rel="shortcut icon" href="images/logo/icon/favicon.ico">
+	<meta name="apple-mobile-web-app-title" content="ZapPodbor - автозапчасти ">
+	<meta name="application-name" content="ZapPodbor - автозапчасти ">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="msapplication-TileImage" content="images/logo/icon/mstile-144x144.png">
+	<meta name="msapplication-config" content="images/logo/icon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	
+<!--Стили-->
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/emmet-style.min.css">
+	<link rel="alternate" href="css/my-style.scss">
+	<link rel="stylesheet" href="css/my-style.css">
+	
+<!--Скрипты:-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="js/jquery.mobile.custom.js"></script>
+	<script src="js/jquery.maskedinput.js"></script>
+	<script src="js/jquery.matchHeight-min.js"></script>
+	<script src="js/jquery.pjax.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/main.js"></script>
+</head>
+	
+<body data-spy="scroll" data-target="#headerMainNavbar" data-offset="0">
+<!--Хедер-->
+	<header>
+		<nav class="navbar navbar-fixed-top navbar-default">
+		<div class="container-fluid">
+		<div class="navbar-header">
+<!--		Логотип слева-->
+			<a class="navbar-brand show-page" href="/"><strong>ПОДБОР АВТОЗАПЧАСТЕЙ</strong></a>
+
+<!--		Кнопка с полосочками на мобилках-->
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#headerMainNavbar" id="headerMenuBtn">
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span> 
+			</button>	
+		</div>
+
+		<div class="collapse navbar-collapse" id="headerMainNavbar">
+<!--		Главное меню-->
+			<ul class="nav navbar-nav" id="headerMainMenu">
+				<li><a class="toAnchor" href="#about">Схема работы</a></li>
+				<li><a class="toAnchor" href="#advantage">Преимущества</a></li>
+				<li><a class="toAnchor" href="#examples">Решенные задачи</a></li>
+				<li><a class="toAnchor" href="#prices">Стоимость</a></li>
+				<li><a class="show-page" href="/order"><strong>Сделать заказ</strong></a></li>
+			</ul>
+
+<!--		Плавающие контакты-->
+			<ul class="nav navbar-nav navbar-right" id="headerNavbarRight">
+<!--			Контакты справа на компе (в меню на мобилках)-->
+				<li id="headerContactsRight" class="hidden">
+					<ul>
+<!--					Подсписок не удалять, нужно для вертикального выравнивания-->
+						<li class="phone-wrapper toAnchor">телефон: <b>+7 (495) 228-14-88</b></li>
+						<li class="address-wrapper">e-mail: <b>vopros@zappodbor.ru</b></li>
+					</ul>
+				</li>
+<!--			Нижние контакты в одну полоску-->
+				<li id="headerContactsBottom" class="hidden"> 
+					<span class="phone-wrapper toAnchor">телефон: &nbsp;<b>+7 (495) 228-14-88</b></span>
+					<span class="address-wrapper">e-mail: &nbsp;<b>vopros@zappodbor.ru</b></span>
+				</li>
+			</ul>
+		</div>
+		</div>
+		</nav>
+	</header>  	
+<!--Основная страница-->
+	<div id="container"></div>
+<!--Футер-->
+	<footer>
+<!--Кипирайт-->
+	<p class="text-center" id="footerCopyright">© Подбор автозапчастей 2016-2017. Все права защищены</p>
+	<div class="container-fluid">
+<!--Футер десктоп-->
+	<nav class="navbar navbar-fixed-bottom hidden-xs" id="footerDesktopNavbar">
+		<div class="row">
+		<div class="col-xs-10">
+			<ul class="nav navbar-nav navbar-custom text-center">
+				<li><a data-toggle="modal" href="#call" class="footer-btns show-window"><span class="glyphicon glyphicon-phone"></span>Заказать звонок</a></li>
+				<li><a href="/order" class="footer-btns show-order-page"><span class="glyphicons glyphicon glyphicon-shopping-cart"></span>Сделать заказ</a></li>
+				<li><a data-toggle="modal" href="#mail" class="footer-btns show-window"><span class="glyphicon glyphicon-envelope"></span>Написать сообщение</a></li>
+			</ul>
+		</div>
+		<div class="col-xs-2">
+<!--		Кнопка пролистывания вверх-->
+			<ul class="nav navbar-nav navbar-right">
+				<li><a class="toAnchor footer-btns hidden" href="#top" id="footerNavScrl"><span class="glyphicon glyphicon-menu-up"></span></a></li>
+				<li><a>&nbsp;</a></li>
+			</ul> 
+		</div>
+		</div>
+	</nav>
+	
+<!--Футер мобилы -->
+<!--	Кнопка скрол вверх-->
+	<a href="#top" class="btn toAnchor btn-fixed visible-xs" role="button" id="footerScrollBtn">
+		<span class="glyphicon glyphicon-menu-up"></span>
+	</a>
+<!--	Кнопка позвонить-->
+	<a href="#call" class="btn visible-xs show-window" data-toggle="modal" role="button" id="footerCallBtn">
+		<span class="glyphicon glyphicon-earphone"></span>
+	</a>
+	</div>
+	</footer>
+	
+<!--	Всплывающие окна:-->
+<!--Окно подробное описание работы-->
+	<div id="more" class="modal fade">
+	<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+	
+	</div>
+	</div>
+	</div>
+<!--Окно перезвона-->
+	<div id="call" class="modal fade">
+	<div class="modal-dialog modal-sm">
+	<div class="modal-content">
+		
+	</div>
+	</div>
+	</div>
+<!--Окно письмо-->
+	<div id="mail" class="modal fade">
+	<div class="modal-dialog">
+	<div class="modal-content">
+		
+	</div>
+	</div>
+	</div>
+</body>
+</html>

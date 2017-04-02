@@ -1,0 +1,215 @@
+/* Scss Document */
+/* line 39, my-style.scss */
+body {
+  background-color: #f8f8f8;
+}
+/* line 42, my-style.scss */
+body header #headerContactsRight {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* line 49, my-style.scss */
+body main #about, body main #newcommer, body main #advantage, body main #examples {
+  padding: 30px 0px;
+}
+/* line 52, my-style.scss */
+body main #top {
+  background: url(../images/top/top-background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 30px;
+}
+/* line 58, my-style.scss */
+body main #top .col-xs-12 {
+  margin-top: 30px;
+  padding: 0px 10px;
+}
+/* line 63, my-style.scss */
+body main #top .col-xs-12.col-sm-7 h4 {
+  margin-bottom: 0;
+}
+/* line 67, my-style.scss */
+body main #top .col-xs-12.col-sm-7 #topAccordion {
+  margin-top: 36px;
+}
+/* line 70, my-style.scss */
+body main #top .col-xs-12.col-sm-7 .panel-body {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px 15px;
+}
+/* line 77, my-style.scss */
+body main #top .col-xs-12.col-sm-5 .top-attention {
+  color: #d18b1d;
+}
+/* line 80, my-style.scss */
+body main #top .col-xs-12.col-sm-5 form {
+  border: thin solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+/* line 89, my-style.scss */
+body main #about {
+  background-image: url(../images/prices/prices-bg.png);
+}
+/* line 95, my-style.scss */
+body main #about .carousel #aboutSlideAlgo .thumbnail {
+  border: hidden;
+  background-color: transparent;
+  margin-bottom: 0;
+}
+/* line 100, my-style.scss */
+body main #about .carousel #aboutSlideAlgo .thumbnail .lead {
+  margin-bottom: 0;
+}
+/* line 105, my-style.scss */
+body main #about .carousel #aboutSlideAlgo .algo-down {
+  margin: 0;
+}
+/* line 109, my-style.scss */
+body main #about .carousel .carousel-control {
+  color: #404040;
+}
+/* line 113, my-style.scss */
+body main #about h5 {
+  margin-bottom: 0;
+}
+/* line 118, my-style.scss */
+body main #newcommer {
+  background-color: #27b399;
+  color: #404040;
+}
+/* line 123, my-style.scss */
+body main #newcommer h2 {
+  color: white;
+}
+/* line 128, my-style.scss */
+body main #advantage {
+  background-image: url(../images/advantages/advantage-bg.png);
+}
+/* line 133, my-style.scss */
+body main #examples {
+  background-color: #27b399;
+}
+/* line 137, my-style.scss */
+body main #examples h2 {
+  color: #404040;
+}
+/* line 141, my-style.scss */
+body main #examples .thumbnail {
+  border-radius: 10px;
+  background-color: rgba(248, 248, 248, 0.88);
+}
+/* line 144, my-style.scss */
+body main #examples .thumbnail table {
+  margin-bottom: 0;
+}
+/* line 147, my-style.scss */
+body main #examples .thumbnail table .examples-bad-condition {
+  background-color: #F08688;
+}
+/* line 150, my-style.scss */
+body main #examples .thumbnail table .examples-good-condition {
+  background-color: #79D6A1;
+}
+/* line 156, my-style.scss */
+body main #examples .carousel-control {
+  color: #404040;
+}
+/* line 160, my-style.scss */
+body main #examples a .btn {
+  margin-top: 20px;
+}
+/* line 166, my-style.scss */
+body main #prices {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background-color: #f8f8f8;
+}
+/* line 171, my-style.scss */
+body main #prices .table-responsive {
+  border-radius: 10px;
+}
+/* line 176, my-style.scss */
+body footer {
+  margin-bottom: 30px;
+}
+/* line 178, my-style.scss */
+body footer .navbar {
+  margin-left: 15px;
+}
+/* line 182, my-style.scss */
+body footer .navbar .navbar-nav li a {
+  color: white;
+}
+/* line 184, my-style.scss */
+body footer .navbar .navbar-nav li a:hover {
+  color: #27b399;
+}
+/* line 187, my-style.scss */
+body footer .navbar .navbar-nav li a span {
+  margin-right: 7px;
+}
+/* line 193, my-style.scss */
+body footer .navbar .navbar-nav.navbar-custom li {
+  background-color: #197262;
+}
+/* line 195, my-style.scss */
+body footer .navbar .navbar-nav.navbar-custom li:first-child {
+  border-right: thin solid white;
+}
+/* line 198, my-style.scss */
+body footer .navbar .navbar-nav.navbar-custom li:last-child {
+  border-left: thin solid white;
+}
+/* line 206, my-style.scss */
+body footer .navbar .navbar-nav.navbar-right li {
+  background-color: #197262;
+}
+/* line 208, my-style.scss */
+body footer .navbar .navbar-nav.navbar-right li:last-child {
+  background-color: transparent;
+}
+/* line 216, my-style.scss */
+body footer .btn-fixed, body footer #footerScrollBtn, body footer #footerCallBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+/* line 228, my-style.scss */
+body footer .btn-fixed:hover, body footer #footerScrollBtn:hover, body footer #footerCallBtn:hover {
+  background-color: #27b399;
+}
+/* line 233, my-style.scss */
+body footer #footerScrollBtn {
+  right: 30px;
+  background-color: #535353;
+}
+/* line 239, my-style.scss */
+body footer #footerCallBtn {
+  left: 30px;
+  background-color: #22B925;
+}
+/* line 251, my-style.scss */
+body #call .call-margin-fix {
+  margin: inherit;
+}
+/* line 257, my-style.scss */
+body #mail .mail-margin-fix {
+  margin: inherit;
+}
+/* line 260, my-style.scss */
+body #mail textarea {
+  width: 100%;
+  text-indent: 1.0em;
+}
+
+/*# sourceMappingURL=my-style.css.map */
